@@ -23,9 +23,9 @@ function playGame(turns) {
                 chances --
                 var guess = this.innerHTML;
                 if(guess < randomNumer) {
-                    message.innerHTML = "Lower: " + chances + " chances left"; 
+                    message.innerHTML = "Smaller: " + chances + " chances left"; 
                 } else if(guess > randomNumer) {
-                    message.innerHTML = "Upper: " + chances + " chances left"
+                    message.innerHTML = "Greater: " + chances + " chances left"
                 } else {
                     message.innerHTML = "Congrats You Won!";
                     won = 1;
