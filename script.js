@@ -11,17 +11,18 @@ function startGame() {
 }
 
 function handleClick(randomNumber, chances, guess, won, message) {
-    if(chances >= 0 && won == 0) {
+    console.log(won);
+    if(chances >= 0 && won.val == 0) {
         if(guess < randomNumber) {
             message.innerHTML = "Smaller: " + chances + " chances left"; 
         } else if(guess > randomNumber) {
             message.innerHTML = "Greater: " + chances + " chances left"
         } else {
             message.innerHTML = "Congrats You Won!";
-            won = 1;
+            won.val = 1;
         }
     }
-    if(chances <= 0 && won == 0) {
+    if(chances <= 0 && won.val == 0) {
         message.innerHTML = "You Lost: 0 chances left."
     }
 }
@@ -69,7 +70,9 @@ function press(key) {
 
 function playGame(turns) {
     var chances = turns;
-    var won = 0;
+    var won = {
+        val : 0
+    };
     var randomNumber = Math.floor(Math.random()*10);
     console.log(randomNumber);
     var boxes = document.querySelectorAll(".boxes");
