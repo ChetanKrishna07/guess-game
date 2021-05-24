@@ -1,72 +1,75 @@
 body {
-    margin: 0px;
-    padding: 0px;
-    background:rgb(41, 41, 41);
+  margin: 0px;
+  padding: 0px;
+  background: rgb(41, 41, 41);
 }
 
 .title {
-    text-align: center;
-    color:aqua;
-    font-size: 7em;
-    font-family: 'Lobster', cursive;
-    text-shadow: 5px 5px #00000063;
-    margin: 30px;
-    margin-bottom: 10px;
+  text-align: center;
+  color: aqua;
+  font-size: 7em;
+  font-family: "Lobster", cursive;
+  text-shadow: 5px 5px #00000063;
+  margin: 30px;
+  margin-bottom: 10px;
 }
 
 .numbers {
-    display: flex;
-    flex-wrap: wrap;
-    width: 1200px;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
 }
 
 .boxes {
-    display: flex;
-    background: rgba(238, 40, 40, 0.658);
-    border: 15px rgba(0, 0, 0, 0.973) solid;
-    border-radius: 20px;
-    width: 150px;
-    height: 150px;
-    margin: 20px;
-    align-items: center;
-    justify-content: center;
-    font-size: 5em;
-    box-shadow: 10px 10px #00000063;
+  display: flex;
+  background: rgba(238, 40, 40, 0.658);
+  border: 15px rgba(0, 0, 0, 0.973) solid;
+  border-radius: 20px;
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: 5em;
+  box-shadow: 10px 10px #00000063;
 }
 
 .boxes:hover {
-    background: rgba(168, 28, 28, 0.658);
-    cursor: pointer;
+  background: rgba(168, 28, 28, 0.658);
+  cursor: pointer;
 }
 
-.boxes:active {
-    transform: translate(4px, 4px);
-    box-shadow: 6px 6px #000000ab;
-}
 
 .btn {
-    display: flex;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    border-radius: 20px;
-    width: 200px;
-    height: 50px;
-    font-size: 3em;
-    box-shadow: 5px 5px #00000063;
-    margin-top: 20px;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 20px;
+  width: 200px;
+  height: 50px;
+  font-size: 3em;
+  box-shadow: 5px 5px #00000063;
+  margin-top: 20px;
 }
 
 .btn:hover {
-    background: rgb(175, 175, 175);
-    cursor: pointer;
+  background: rgb(175, 175, 175);
+  cursor: pointer;
 }
 
-.btn:active {
-    transform: translate(2px, 2px);
-    box-shadow: 3px 3px #00000063;
+.pressed {
+  background: rgba(168, 28, 28, 0.658);
+  transform: translate(4px, 4px);
+  box-shadow: 6px 6px #000000ab;
 }
+
+.pressedSubmit {
+    background: rgb(175, 175, 175);
+    transform: translate(4px, 4px);
+    box-shadow: 1px 1px #000000ab;
+  }
