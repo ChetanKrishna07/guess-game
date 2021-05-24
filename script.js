@@ -13,6 +13,7 @@ function startGame() {
 function handleClick(randomNumber, chances, guess, won, message) {
     console.log(won);
     if(chances >= 0 && won.val == 0) {
+        press(guess);
         if(guess < randomNumber) {
             message.innerHTML = "Smaller: " + chances + " chances left"; 
         } else if(guess > randomNumber) {
@@ -82,7 +83,6 @@ function playGame(turns) {
             chances --;
             var guess = this.innerHTML;
             handleClick(randomNumber, chances, guess, won, message);
-            press(guess);
         })
     }
     document.addEventListener("keydown", function(event) {
@@ -90,7 +90,6 @@ function playGame(turns) {
         if(guess >= 0 && guess <= 9 && guess != " ") {
             chances --;
             handleClick(randomNumber, chances, guess, won, message);
-            press(guess);
         }
     } )
 }
