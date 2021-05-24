@@ -11,7 +11,7 @@ function startGame() {
 }
 
 function handleClick(randomNumber, chances, guess, won, message) {
-    if(chances > 0 && won == 0) {
+    if(chances >= 0 && won == 0) {
         if(guess < randomNumber) {
             message.innerHTML = "Smaller: " + chances + " chances left"; 
         } else if(guess > randomNumber) {
@@ -104,7 +104,7 @@ document.addEventListener("keydown", function(event) {
     if(event.key == " ") {
         press(" ");
         document.querySelector(".title").innerHTML = "Guess A Number";
-        this.innerHTML = "Restart";
+        document.querySelector(".btn").innerHTML = "Restart";
         startGame();
     }
 })
